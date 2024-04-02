@@ -43,9 +43,9 @@ module.exports.run = async function({
                 let page = 2;
                 let start = (page - 1) * pages;
                 let end = start + pages;
-                let helpMessage = `🔴🟢🟡\n\n====『 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗜𝗦𝗧: 』====\n\n`;
+                let helpMessage = `\n\n ◉𝗔𝗨𝗧𝗢𝗕𝗢𝗧 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 ⏤͟͟͞͞𝗟𝗜𝗦𝗧\n\n`;
                 for (let i = start; i < Math.min(end, commands.length); i++) {
-                    helpMessage += `  ╭─╮\n  | 『 ${i + 1}.』  ${prefix}${commands[i]}\n  ╰─────────────ꔪ\n`;
+                    helpMessage += `  ┏━━━━━━❍\n  | 『 ${i + 1}.』  ${prefix}${commands[i]}\n  ┗━━━━━━━━━━❐\n`;
                 }
                 helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the previous page, type '${prefix}help'. To view information about a specific command, type '${prefix}help command name'.\n\n`;
                 api.sendMessage(helpMessage, event.threadID, event.messageID);
