@@ -15,7 +15,7 @@ module.exports.run = async function({ api, event }) {
 			const senderID = event.messageReply.senderID;
 			return api.sendMessage(senderID, event.threadID);
 		} else {
-			return api.sendMessage(`${event.senderID}`, event.threadID, event.messageID);
+			return api.sendMessage(`𝘆𝗼𝘂𝗿 𝘂𝗶𝗱🤔⁉️\n\n𝗁𝖾𝗋𝖾 𝗂𝗌 𝗒𝗈𝗎𝗋 𝗎𝗂𝖽:${event.senderID}`, event.threadID, event.messageID);
 		}
 	} else {
 		for (const mentionID in event.mentions) {
