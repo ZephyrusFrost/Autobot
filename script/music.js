@@ -3,8 +3,8 @@ module.exports.config = {
   name: "music",
   version: "1.0.0",
   role: 0,
-  hasPrefix: true,
-  aliases: ['play'],
+  hasPrefix: false,
+  aliases: ['play','sing','song'],
   usage: 'Music [promt]',
   description: 'Search music in youtube',
   credits: 'Deveploper',
@@ -46,7 +46,7 @@ module.exports.run = async function({
           return api.sendMessage('The file could not be sent because it is larger than 25MB.', event.threadID);
         }
         const message = {
-          body: `${music.title}`,
+          body: `━━━━━━━━━━━━━━━━━━━\n𝗔𝗨𝗧𝗢𝗕𝗢𝗧 \n\n🎵𝗧𝗜𝗧𝗟𝗘:${music.title}\n━━━━━━━━━━━━━━━━━━━\n𝗖𝗥𝗘𝗔𝗧𝗢𝗥: https://www.facebook.com/kyleyukaro`,
           attachment: fs.createReadStream(filePath)
         };
         api.sendMessage(message, event.threadID, () => {
