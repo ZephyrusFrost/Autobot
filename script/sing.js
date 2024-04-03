@@ -4,7 +4,7 @@ module.exports.config = {
  role: 0,
  credits: "Grey",
  description: "Play a song",
- aliases: ["sing"],
+ aliases: ["sing","song","music"],
 cooldown: 0,
 hasPrefix: false,
 	usage: "",
@@ -63,7 +63,7 @@ module.exports.run = async ({ api, event }) => {
 	 }
 
 	 const message = {
-		body: `Here's your music, enjoy!🥰\n\nTitle: ${video.title}\nArtist: ${video.author.name}`,
+		body: `┏━━━━━━━━━𝗔𝗨𝗧𝗢𝗕𝗢𝗧━━━━━━━━━┓\nHere's your music, enjoy!🥰\n\n🎵Title: ${video.title}\n👤Artist: ${video.author.name}\m┗━━━━━━━━━𝙆𝙔𝙇𝙀━━━━━━━━━┛`,
 		attachment: fs.createReadStream(filePath)
 	 };
 
