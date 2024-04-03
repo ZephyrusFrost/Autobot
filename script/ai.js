@@ -6,7 +6,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "Kyle", // Changed the credits to "Kyle"
     description: "EDUCATIONAL",
-    usePrefix: false,
+    hasPrefix: false,
     commandCategory: "AI",
     usages: "[question]",
     cooldowns: 10
