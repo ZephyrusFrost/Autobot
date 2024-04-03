@@ -6,7 +6,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "Kyle", // Changed the credits to "Kyle"
     description: "EDUCATIONAL",
-    usePrefix: false,
+    usePrefix: true,
     commandCategory: "AI",
     usages: "[question]",
     cooldowns: 10
@@ -24,7 +24,7 @@ module.exports.run = async function ({ api, event, args }) {
         const response = await axios.get(apiUrl);
         const answer = response.data.answer;
 
-        api.sendMessage(`𝗔𝗨𝗧𝗢 𝗕𝗢𝗧 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘:\n━━━━━━━━━━━━━━━━━━━\n𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻: ${question}\n━━━━━━━━━━━━━━━━━━━\n𝗔𝗻𝘀𝘄𝗲𝗿: ${answer}\n\n𝗕𝗢𝗧 𝗖𝗥𝗘𝗔𝗧𝗢𝗥: https://www.facebook.com/kyleyukaro`, event.threadID, event.messageID); // Added the FB link
+        api.sendMessage(`𝗔𝗜 🚀\n━━━━━━━━━━━━━━━━━━━\n𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻: ${question}\n━━━━━━━━━━━━━━━━━━━\n𝗔𝗻𝘀𝘄𝗲𝗿: ${answer}\n\nthis bot was create by Kyle pogi\n𝘊𝘳𝘦𝘥𝘪𝘵𝘴: https://www.facebook.com/kyleyukaro`, event.threadID, event.messageID); // Added the FB link
     } catch (error) {
         console.error(error);
         api.sendMessage("An error occurred while processing your request.", event.threadID);
