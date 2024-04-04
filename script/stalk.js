@@ -3,7 +3,7 @@ const fs = require('fs')
 module.exports = {
   config: {
     name: "stalk" ,
-    usePrefix: true,
+    hasPrefix: false,
      credits:"1SOY DEV",
      usage:`stalk @user`,
     description: "stalk the tag user",
