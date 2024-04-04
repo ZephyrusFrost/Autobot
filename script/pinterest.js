@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "Joshua Sy",
     description: "Image search",
-    usePrefix: true,
+    hasPrefix: false,
     commandCategory: "Search",
     usages: "[Text]",
     cooldowns: 0,
